@@ -4,76 +4,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoja de Vida - Oscar Ramos</title>
+  <title>Oscar Ramos - Hoja de Vida</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <style>
-    .card {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: none;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 30px;
-      color: white;
-    }
-    h1, h2 {
-      font-weight: bold;
-    }
-    .btn-custom {
-      background-color: rgba(255,255,255,0.15);
-      color: white;
-      font-weight: bold;
-      border: none;
-    }
-    .btn-custom:hover {
-      background-color: rgba(255,255,255,0.3);
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h1>Oscar Ramos</h1>
-      <p class="lead">Desarrollador Fullstack - Arquitecto de Soluciones</p>
-    </div>
+  <div class="container-fluid">
+    <div class="row">
 
-    <div class="card">
-      <h2>Perfil Profesional</h2>
-      <p>
-        Soy un desarrollador experto en software con pasión por las tecnologías web y la lectura. Me especializo en el diseño, desarrollo y arquitectura de soluciones para productos digitales, utilizando las mejores prácticas y tendencias para afrontar retos técnicos.
-      </p>
-    </div>
+      <!-- Columna Izquierda -->
+      <aside class="col-md-3 bg-dark text-white p-4" id="perfil">
+        <div class="text-center">
+          <img src="assets/perfil.jpg" alt="Foto de perfil" class="img-fluid rounded-circle mb-3" width="150">
+          <h3>Oscar Andres Ramos</h3>
+          <p>Senior Software Developer<br>DigitalWare - Colombia</p>
+        </div>
+      </aside>
 
-    <div class="card">
-      <h2>Conocimientos</h2>
-      <ul>
-        <li>Diseño y arquitectura de software</li>
-        <li>Desarrollo Backend y Frontend</li>
-        <li>SQL Server, Entity Framework, ASP.NET Core</li>
-        <li>Microservicios, Docker, Git, CI/CD</li>
-        <li>Angular, React, HTML/CSS, Bootstrap</li>
-      </ul>
-    </div>
+      <!-- Columna Central -->
+      <main class="col-md-6 bg-white p-4" id="conocimientos">
+        <h2>Conocimientos</h2>
 
-    <div class="card">
-      <h2>Enlaces Personales</h2>
-      <div class="d-flex flex-column align-items-center">
-        <button class="btn btn-custom btn-block mb-2" onclick="location.href='https://platzi.com/p/oscar-ramos/'">Perfil en Platzi</button>
-        <button class="btn btn-custom btn-block mb-2" onclick="location.href='https://www.linkedin.com/in/oscar-ramos-dev/'">Perfil en LinkedIn</button>
-        <button class="btn btn-custom btn-block mb-2" onclick="location.href='https://github.com/oscar-ramos-dev'">Repositorio GitHub</button>
-        <button class="btn btn-custom btn-block mb-2" onclick="location.href='mailto:oscar.ramos@email.com'">Contáctame por correo</button>
-      </div>
-    </div>
+        <section class="conocimiento">
+          <h4>Arquitectura de Software</h4>
+          <p>Diseño de soluciones robustas utilizando patrones de arquitectura modernos.</p>
+          <img src="assets/arquitectura.jpg" alt="Arquitectura" class="img-fluid rounded">
+        </section>
 
-    <div class="text-center mt-5">
-      <small>Desarrollado por Oscar Ramos - 2025</small>
+        <section class="conocimiento">
+          <h4>Desarrollo Frontend</h4>
+          <p>Especializado en React, Angular y optimización de interfaces.</p>
+          <img src="assets/frontend.jpg" alt="Frontend" class="img-fluid rounded">
+        </section>
+
+        <section class="conocimiento">
+          <h4>Desarrollo Backend</h4>
+          <p>Experiencia en .NET, Node.js, C#, diseño de APIs y SQL Server.</p>
+          <img src="assets/backend.jpg" alt="Backend" class="img-fluid rounded">
+        </section>
+
+      </main>
+
+      <!-- Columna Derecha -->
+      <aside class="col-md-3 bg-light p-4" id="enlaces">
+        <h4>Redes y Enlaces</h4>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://www.linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a></li>
+          <li class="list-group-item"><a href="https://platzi.com/p/tu-usuario" target="_blank">Platzi</a></li>
+          <li class="list-group-item"><a href="https://github.com/tu-usuario" target="_blank">GitHub</a></li>
+          <li class="list-group-item"><a href="https://tusitio.com" target="_blank">Sitio Web</a></li>
+        </ul>
+      </aside>
+
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
