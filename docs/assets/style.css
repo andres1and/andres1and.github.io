@@ -1,106 +1,107 @@
-/* General Reset */
-body, html {
+body {
 	margin: 0;
-	padding: 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	animation: Gradient 15s ease infinite;
-	color: #333;
-	height: 100vh;
+	background: linear-gradient(to right, #1e3c72, #2a5298);
+	color: #fff;
   }
   
-  @keyframes Gradient {
-	0% { background-position: 0% 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0% 50%; }
-  }
-  
-  /* Layout */
   .container {
 	display: grid;
+	grid-template-areas: 
+	  "perfil conocimientos enlaces";
 	grid-template-columns: 1fr 2fr 1fr;
-	height: 100vh;
-	gap: 20px;
-	padding: 40px;
-	box-sizing: border-box;
+	gap: 2rem;
+	padding: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
   }
   
-  .column {
-	background: rgba(255, 255, 255, 0.95);
-	border-radius: 12px;
-	padding: 20px;
-	overflow-y: auto;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  .perfil {
+	grid-area: perfil;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 10px;
+	text-align: center;
   }
   
-  /* Left Column */
-  .profile-img {
-	width: 100%;
+  .foto-perfil {
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
-	margin-bottom: 20px;
-  }
-  
-  .profile-info {
-	text-align: center;
-  }
-  
-  .profile-info h2 {
-	margin: 10px 0;
-	font-size: 22px;
-  }
-  
-  .profile-info p {
-	font-size: 14px;
-	color: #666;
-  }
-  
-  /* Middle Column */
-  .skills {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-  }
-  
-  .skill {
-	background: #f9f9f9;
-	border-left: 5px solid #23A6D5;
-	padding: 15px;
-	border-radius: 8px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-  
-  .skill h3 {
-	margin-top: 0;
-  }
-  
-  .skill img {
-	width: 100%;
-	max-height: 150px;
+	margin-bottom: 1rem;
 	object-fit: cover;
-	border-radius: 8px;
-	margin-top: 10px;
   }
   
-  /* Right Column */
-  .links {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+  .descripcion {
+	margin-top: 1rem;
+	text-align: left;
   }
   
-  .link-button {
-	background: #23A6D5;
-	color: white;
+  .conocimientos {
+	grid-area: conocimientos;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 10px;
+  }
+  
+  .conocimientos ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .conocimientos li {
+	margin-bottom: 1.5rem;
+  }
+  
+  .conocimientos img {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	margin-top: 0.5rem;
+	border-radius: 5px;
+  }
+  
+  .enlaces {
+	grid-area: enlaces;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 10px;
+  }
+  
+  .enlaces .btn {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
 	text-align: center;
-	padding: 12px;
-	border: none;
-	border-radius: 8px;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-radius: 5px;
 	text-decoration: none;
-	font-weight: bold;
 	transition: background 0.3s ease;
   }
   
-  .link-button:hover {
-	background: #1b7ca6;
+  .enlaces .btn:hover {
+	background-color: rgba(255, 255, 255, 0.4);
   }
+  
+  footer {
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.9rem;
+	color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+	.container {
+	  grid-template-areas: 
+		"perfil"
+		"conocimientos"
+		"enlaces";
+	  grid-template-columns: 1fr;
+	}
+  
+	.conocimientos img {
+	  max-width: 100%;
+	}
+  }
+  
