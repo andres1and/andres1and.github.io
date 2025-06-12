@@ -10,57 +10,47 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container">
+    <!-- Columna izquierda -->
+    <div class="perfil">
+      <img src="assets/perfil.jpg" alt="Foto de perfil" class="foto-perfil">
+      <h3>Oscar Andres Ramos</h3>
+      <p>Senior Software Developer<br>DigitalWare - Colombia</p>
+    </div>
 
-      <!-- Columna Izquierda -->
-      <aside class="col-md-3 bg-dark text-white p-4" id="perfil">
-        <div class="text-center">
-          <img src="assets/perfil.jpg" alt="Foto de perfil" class="img-fluid rounded-circle mb-3" width="150">
-          <h3>Oscar Andres Ramos</h3>
-          <p>Senior Software Developer<br>DigitalWare - Colombia</p>
-        </div>
-      </aside>
+    <!-- Columna central -->
+    <div class="conocimientos">
+      <h2>Conocimientos</h2>
 
-      <!-- Columna Central -->
-      <main class="col-md-6 bg-white p-4" id="conocimientos">
-        <h2>Conocimientos</h2>
-
-        <section class="conocimiento">
+      <ul>
+        <li>
           <h4>Arquitectura de Software</h4>
           <p>Diseño de soluciones robustas utilizando patrones de arquitectura modernos.</p>
-          <img src="assets/arquitectura.jpg" alt="Arquitectura" class="img-fluid rounded">
-        </section>
-
-        <section class="conocimiento">
+          <img src="assets/arquitectura.jpg" alt="Arquitectura">
+        </li>
+        <li>
           <h4>Desarrollo Frontend</h4>
           <p>Especializado en React, Angular y optimización de interfaces.</p>
-          <img src="assets/frontend.jpg" alt="Frontend" class="img-fluid rounded">
-        </section>
-
-        <section class="conocimiento">
+          <img src="assets/frontend.jpg" alt="Frontend">
+        </li>
+        <li>
           <h4>Desarrollo Backend</h4>
           <p>Experiencia en .NET, Node.js, C#, diseño de APIs y SQL Server.</p>
-          <img src="assets/backend.jpg" alt="Backend" class="img-fluid rounded">
-        </section>
+          <img src="assets/backend.jpg" alt="Backend">
+        </li>
+      </ul>
+    </div>
 
-      </main>
-
-      <!-- Columna Derecha -->
-      <aside class="col-md-3 bg-light p-4" id="enlaces">
-        <h4>Redes y Enlaces</h4>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="https://www.linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a></li>
-          <li class="list-group-item"><a href="https://platzi.com/p/tu-usuario" target="_blank">Platzi</a></li>
-          <li class="list-group-item"><a href="https://github.com/tu-usuario" target="_blank">GitHub</a></li>
-          <li class="list-group-item"><a href="https://tusitio.com" target="_blank">Sitio Web</a></li>
-        </ul>
-      </aside>
-
+    <!-- Columna derecha -->
+    <div class="enlaces">
+      <h4>Redes y Enlaces</h4>
+      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://platzi.com/p/tu-usuario" target="_blank" class="btn">Platzi</a>
+      <a href="https://github.com/tu-usuario" target="_blank" class="btn">GitHub</a>
+      <a href="https://tusitio.com" target="_blank" class="btn">Sitio Web</a>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>

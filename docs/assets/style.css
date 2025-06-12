@@ -1,74 +1,80 @@
-body {
+/* Fondo global con degradado y estilo base */
+html, body {
+	height: 100%;
 	margin: 0;
+	padding: 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background: linear-gradient(to right, #1e3c72, #2a5298);
 	color: #fff;
-}
-
-.container {
+  }
+  
+  /* Contenedor general en grid */
+  .container {
 	display: grid;
 	grid-template-areas:
-		"perfil conocimientos enlaces";
+	  "perfil conocimientos enlaces";
 	grid-template-columns: 1fr 2fr 1fr;
 	gap: 2rem;
 	padding: 2rem;
 	max-width: 1200px;
 	margin: 0 auto;
-}
-
-.perfil {
+	min-height: 100vh;
+  }
+  
+  /* Columna izquierda: perfil */
+  .perfil {
 	grid-area: perfil;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(0, 0, 0, 0.8);
 	padding: 1.5rem;
 	border-radius: 10px;
 	text-align: center;
-}
-
-.foto-perfil {
-	width: 100px;
-	height: 100px;
+  }
+  
+  /* Imagen de perfil */
+  .foto-perfil {
+	width: 120px;
+	height: 120px;
 	border-radius: 50%;
 	margin-bottom: 1rem;
 	object-fit: cover;
-}
-
-.descripcion {
-	margin-top: 1rem;
-	text-align: left;
-}
-
-.conocimientos {
+  }
+  
+  /* Contenido central: conocimientos */
+  .conocimientos {
 	grid-area: conocimientos;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.95);
 	padding: 1.5rem;
 	border-radius: 10px;
-}
-
-.conocimientos ul {
+	color: #000;
+  }
+  
+  .conocimientos ul {
 	list-style: none;
 	padding: 0;
-}
-
-.conocimientos li {
+  }
+  
+  .conocimientos li {
 	margin-bottom: 1.5rem;
-}
-
-.conocimientos img {
+  }
+  
+  .conocimientos img {
 	width: 100%;
 	max-width: 300px;
 	height: auto;
 	margin-top: 0.5rem;
 	border-radius: 5px;
-}
-
-.enlaces {
+  }
+  
+  /* Columna derecha: enlaces */
+  .enlaces {
 	grid-area: enlaces;
 	background-color: rgba(255, 255, 255, 0.1);
 	padding: 1.5rem;
 	border-radius: 10px;
-}
-
-.enlaces .btn {
+  }
+  
+  /* Botones/enlaces */
+  .enlaces .btn {
 	display: block;
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #fff;
@@ -78,74 +84,32 @@ body {
 	border-radius: 5px;
 	text-decoration: none;
 	transition: background 0.3s ease;
-}
-
-.enlaces .btn:hover {
+  }
+  
+  .enlaces .btn:hover {
 	background-color: rgba(255, 255, 255, 0.4);
-}
-
-footer {
+  }
+  
+  /* Pie de página */
+  footer {
 	text-align: center;
 	padding: 1rem;
 	font-size: 0.9rem;
 	color: #ddd;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* Responsivo para móviles */
+  @media (max-width: 768px) {
 	.container {
-		grid-template-areas:
-			"perfil"
-			"conocimientos"
-			"enlaces";
-		grid-template-columns: 1fr;
+	  grid-template-areas:
+		"perfil"
+		"conocimientos"
+		"enlaces";
+	  grid-template-columns: 1fr;
 	}
-
+  
 	.conocimientos img {
-		max-width: 100%;
+	  max-width: 100%;
 	}
-}
-
-/* Estilos comunes para cajas con transparencia */
-.content-box {
-	background: rgba(255, 255, 255, 0.1);
-	/* fondo semi-transparente */
-	backdrop-filter: blur(10px);
-	/* efecto difuminado de fondo */
-	-webkit-backdrop-filter: blur(10px);
-	/* soporte Safari */
-	border-radius: 15px;
-	padding: 20px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	color: #fff;
-}
-
-/* Estilo base (assets/style.css) */
-html,
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background: linear-gradient(to right, #1e3c72, #2a5298);
-	color: #fff;
-}
-
-#perfil,
-#enlaces {
-	background-color: rgba(0, 0, 0, 0.8);
-	/* Oscurece ligeramente sobre el degradado */
-	color: #fff;
-}
-
-#conocimientos {
-	background-color: rgba(255, 255, 255, 0.95);
-	color: #000;
-}
-
-.container-fluid,
-.row {
-  min-height: 100vh;
-}
+  }
+  
